@@ -12,9 +12,6 @@ foreach cpidir of local cpidirs {
 }
 local cpivin = max(`cpivins')
 
-* cap datalibweb, country(Support) year(2005) type(GMDRAW) fileserver ///
-*  surveyid(Support_2005_CPI_v0`cpivin'_M) filename(Survey_price_framework.dta)
-
 use "${dlw_dir}/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD_CPI.dta", clear
 
 cap noi datasignature confirm using "cpi"
