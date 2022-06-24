@@ -1,7 +1,7 @@
 
 // make sure you change to wherever the aux_cpi repo is stored in your machine
 // In profile.do I set the global wb_dir in my computer for general use
-cd "${wb_dir}\DECDG\PIP\aux_data\aux_cpi\"
+*cd "${wb_dir}\DECDG\PIP\aux_data\aux_cpi\"
 global dlw_dir "\\wbgfscifs01\GPWG-GMD\Datalib\GMD-DLW\Support\Support_2005_CPI\"
 
 local cpidirs: dir "${dlw_dir}" dirs "*_A_GMD", respectcase
