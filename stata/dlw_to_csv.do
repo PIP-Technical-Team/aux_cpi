@@ -11,10 +11,16 @@ foreach cpidir of local cpidirs {
 	local cpivins "`cpivins', `cpivin'"
 }
 local cpivin = max(`cpivins')
+disp "`cpivin'"
+
 
 use "${dlw_dir}/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD_CPI.dta", clear
 
-cap noi datasignature confirm using "cpi"
+* Add cpi_id "CPI_v0`cpivin'_M_v01_A"
+
+gen cpi_id = "CPI_v0`cpivin'_M_v01_A"
+
+cap noi datasignature confirm using "cpi", strict
 if (_rc) {
 	datasignature set, reset saving("cpi", replace)
   export delimited  "cpi.csv" , replace
