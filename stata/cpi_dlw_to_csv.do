@@ -14,10 +14,10 @@ foreach cpidir of local cpidirs {
 local cpivin = max(`cpivins')
 disp "`cpivin'"
 
-use "${dlw_dir}/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD/Support_2005_CPI_v0`cpivin'_M_v01_A_GMD_CPI.dta", clear
+use "${dlw_dir}/Support_2005_CPI_v`cpivin'_M_v01_A_GMD/Support_2005_CPI_v`cpivin'_M_v01_A_GMD_CPI.dta", clear
 
 * Add cpi_id "CPI_v0`cpivin'_M_v01_A"
-gen cpi_id = "CPI_v0`cpivin'_M_v01_A"
+gen cpi_id = "CPI_v`cpivin'_M_v01_A"
 
 isid code year survname cpi_domain cpi_domain_value
 
