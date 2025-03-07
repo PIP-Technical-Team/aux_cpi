@@ -6,7 +6,7 @@ else if ("`c(username)'" == "wb384996"){
 	global auxout "C:\Users\wb384996\OneDrive - WBG\WorldBank\DECDG\PIP\aux_data"
 }
 cd "${auxout}\aux_cpi\"
-copy cpi.dta vintage/cpi_20250306.dta // do NOT user replace
+copy cpi.dta vintage/cpi_20250306.dta // do NOT use replace
 
 use cpi.dta, clear
 keep if code == "IND"
